@@ -30,12 +30,15 @@ pip install -r requirements.txt
 
 ## Create .env or setup Enviroment variables
 
+```bash
 SPOTIFY_CLIENT_ID=your_spotify_id
 SPOTIFY_CLIENT_SECRET=your_spotify_secret
 LASTFM_API_KEY=your_lastfm_api_key
+```
 
 ## CORS setup (now setup for all urls)
 
+```python
 from fastapi.middleware.cors import CORSMiddleware
 
 app.add_middleware(
@@ -44,3 +47,4 @@ allow_origins=["*"], # Change to your frontend URL in production
 allow_methods=["*"],
 allow_headers=["*"],
 )
+```
